@@ -66,15 +66,15 @@ def create_listitems(data=None):
         for (key, value) in result.iteritems():
             if not value:
                 continue
-            value = unicode(value, "utf-8")
+            #value = unicode(value) 
             if key.lower() in ["label"]:
                 listitem.setLabel(value)
             elif key.lower() in ["search_string"]:
                 path = "plugin://plugin.program.autocompletion/?info=selectautocomplete&&id=%s" % value
                 listitem.setPath(path=path)
-                listitem.setProperty("path", path)
-        listitem.setProperty("index", str(count))
-        listitem.setProperty("isPlayable", "false")
+                listitem.setProperty('path', path)
+        listitem.setProperty('index' , str(count))
+        listitem.setProperty('isPlayable' , "false")
         itemlist.append(listitem)
     return itemlist
 
