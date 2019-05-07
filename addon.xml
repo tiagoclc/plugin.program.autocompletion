@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.program.autocompletion" name="AutoCompletion for virtual keyboard" version="2.0.1" provider-name="Philipp Temminghoff (phil65)">
     <requires>
-        <import addon="xbmc.python" version="2.7.13" />
+        <import addon="xbmc.python" version="3.5.3" />
         <import addon="script.module.simplejson" version="3.4.2"/>
         <import addon="script.module.autocompletion" version="1.1.2"/>
     </requires>
@@ -15,7 +15,7 @@
         <description lang="en">AutoCompletion for the virtual keyboard (needs skin support)</description>
         <platform>all</platform>
         <license>GNU GENERAL PUBLIC LICENSE Version 2.1, February 1999</license>
-        <source>https://github.com/phil65/plugin.program.autocompletion</source>
+        <source>https://github.com/tiagoclc/plugin.program.autocompletion</source>
         <assets>
             <icon>resources/icon.png</icon>
             <fanart>resources/fanart.jpg</fanart>
