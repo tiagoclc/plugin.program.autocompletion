@@ -38,7 +38,10 @@ def start_info_actions(infos, params):
             get_kodi_json(method="Input.SendText",
                           params='{"text":"%s", "done":false}' % params.get("id"))
             return None
-            # xbmc.executebuiltin("SendClick(103,32)")
+
+#abaixo estava comentado
+
+            xbmc.executebuiltin("SendClick(103,32)")
         pass_list_to_skin(data=listitems,
                           handle=params.get("handle", ""),
                           limit=params.get("limit", 20))
@@ -66,15 +69,15 @@ def create_listitems(data=None):
         for (key, value) in result.iteritems():
             if not value:
                 continue
-            #value = unicode(value) 
+            value = unicode(value)
             if key.lower() in ["label"]:
                 listitem.setLabel(value)
             elif key.lower() in ["search_string"]:
                 path = "plugin://plugin.program.autocompletion/?info=selectautocomplete&&id=%s" % value
                 listitem.setPath(path=path)
                 listitem.setProperty('path', path)
-        listitem.setProperty('index' , str(count))
-        listitem.setProperty('isPlayable' , "false")
+        listitem.setProperty("index", str(count))
+        listitem.setProperty("isPlayable", "false")
         itemlist.append(listitem)
     return itemlist
 
